@@ -13,7 +13,11 @@ setTimeout(function() {
       }, 500);
 }, false);
 
-
+document.addEventListener("keydown", event => {
+    if (event.isComposing || event.key === "Escape") {
+      return console.log("hello");
+    }
+});
 
 
 console.log(header);
